@@ -7,6 +7,11 @@ import "./assets/css/bootstrap.css";
 import "./assets/css/responsive.css";
 import "./assets/css/style.css";
 
+// import "./assets/js/bootstrap.js";
+// import "./assets/js/custom.js";
+
+import "font-awesome/css/font-awesome.min.css";
+
 function App() {
   return (
     <div className="App">

@@ -1,8 +1,10 @@
 import React from "react";
+import { Slide } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
 
 function Slider() {
   return (
-    <>
+    <Slide>
       <section className="slider_section">
         <div className="slider_container">
           <div
@@ -44,7 +46,7 @@ function Slider() {
               </div>
             </div>
 
-            <div className="carousel_btn-box">
+            {/* <div className="carousel_btn-box">
               <a
                 className="carousel-control-prev"
                 href="#carouselExampleIndicators"
@@ -67,11 +69,11 @@ function Slider() {
                 <i className="fa fa-arrow-right" aria-hidden="true"></i>
                 <span className="sr-only">Next</span>
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
-    </>
+    </Slide>
   );
 }
 
