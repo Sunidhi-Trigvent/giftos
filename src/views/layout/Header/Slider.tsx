@@ -36,7 +36,7 @@ function Slider() {
                     <div className="col-md-5 ">
                       <div className="img-box">
                         <img
-                          src={require("../../assets/images/images/slider-img.png")}
+                          src={require("../../../assets/images/images/slider-img.png")}
                           alt=""
                         />
                       </div>

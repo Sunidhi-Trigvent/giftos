@@ -13,11 +13,7 @@ import "./assets/js/bootstrap";
 import "font-awesome/css/font-awesome.min.css";
 
 function App() {
-  return (
-    <div className="App">
-      <RouterProvider router={routers} />
-    </div>
-  );
+  return <RouterProvider router={routers} />;
 }
 
 export default App;
