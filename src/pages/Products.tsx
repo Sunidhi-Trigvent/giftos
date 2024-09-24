@@ -1,6 +1,57 @@
 import React from "react";
 
 function Products() {
+  const products = [
+    {
+      id: 1,
+      productName: "Ring",
+      productPrice: "$200",
+      productImage: "p1.png",
+    },
+    {
+      id: 2,
+      productName: "Watch",
+      productPrice: "$200",
+      productImage: "p2.png",
+    },
+    {
+      id: 3,
+      productName: "Teddy Bear",
+      productPrice: "$200",
+      productImage: "p3.png",
+    },
+    {
+      id: 4,
+      productName: "Flower Bouquet",
+      productPrice: "$200",
+      productImage: "p4.png",
+    },
+    {
+      id: 5,
+      productName: "Teddy Bear",
+      productPrice: "$500",
+      productImage: "p5.png",
+    },
+    {
+      id: 6,
+      productName: "Flower Bouquet",
+      productPrice: "$300",
+      productImage: "p6.png",
+    },
+    {
+      id: 7,
+      productName: "Watch",
+      productPrice: "$300",
+      productImage: "p7.png",
+    },
+    {
+      id: 8,
+      productName: "Watch",
+      productPrice: "$300",
+      productImage: "p8.png",
+    },
+  ];
+
   return (
     <>
       <section className="shop_section layout_padding">
@@ -9,181 +60,29 @@ function Products() {
             <h2>Latest Products</h2>
           </div>
           <div className="row">
-            <div className="col-sm-6 col-md-4 col-lg-3">
-              <div className="box">
-                <a href="">
-                  <div className="img-box">
-                    <img
-                      src={require("../assets/images/images/p1.png")}
-                      alt=""
-                    />
-                  </div>
-                  <div className="detail-box">
-                    <h6>Ring</h6>
-                    <h6>
-                      Price <span>$200</span>
-                    </h6>
-                  </div>
-                  <div className="new">
-                    <span>New</span>
-                  </div>
-                </a>
+            {products?.map((product: any) => (
+              <div className="col-sm-6 col-md-4 col-lg-3">
+                <div className="box">
+                  <a href="">
+                    <div className="img-box">
+                      <img
+                        src={require(`../assets/images/images/${product?.productImage}`)}
+                        alt="productImage"
+                      />
+                    </div>
+                    <div className="detail-box">
+                      <h6>{product?.productName}</h6>
+                      <h6>
+                        Price <span>{product?.productPrice}</span>
+                      </h6>
+                    </div>
+                    <div className="new">
+                      <span>New</span>
+                    </div>
+                  </a>
+                </div>
               </div>
-            </div>
-
-            <div className="col-sm-6 col-md-4 col-lg-3">
-              <div className="box">
-                <a href="">
-                  <div className="img-box">
-                    <img
-                      src={require("../assets/images/images/p2.png")}
-                      alt=""
-                    />
-                  </div>
-                  <div className="detail-box">
-                    <h6>Watch</h6>
-                    <h6>
-                      Price <span>$300</span>
-                    </h6>
-                  </div>
-                  <div className="new">
-                    <span>New</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <div className="col-sm-6 col-md-4 col-lg-3">
-              <div className="box">
-                <a href="">
-                  <div className="img-box">
-                    <img
-                      src={require("../assets/images/images/p3.png")}
-                      alt=""
-                    />
-                  </div>
-                  <div className="detail-box">
-                    <h6>Teddy Bear</h6>
-                    <h6>
-                      Price <span>$110</span>
-                    </h6>
-                  </div>
-                  <div className="new">
-                    <span>New</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <div className="col-sm-6 col-md-4 col-lg-3">
-              <div className="box">
-                <a href="">
-                  <div className="img-box">
-                    <img
-                      src={require("../assets/images/images/p4.png")}
-                      alt=""
-                    />
-                  </div>
-                  <div className="detail-box">
-                    <h6>Flower Bouquet</h6>
-                    <h6>
-                      Price <span>$45</span>
-                    </h6>
-                  </div>
-                  <div className="new">
-                    <span>New</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <div className="col-sm-6 col-md-4 col-lg-3">
-              <div className="box">
-                <a href="">
-                  <div className="img-box">
-                    <img
-                      src={require("../assets/images/images/p5.png")}
-                      alt=""
-                    />
-                  </div>
-                  <div className="detail-box">
-                    <h6>Teddy Bear</h6>
-                    <h6>
-                      Price <span>$95</span>
-                    </h6>
-                  </div>
-                  <div className="new">
-                    <span>New</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <div className="col-sm-6 col-md-4 col-lg-3">
-              <div className="box">
-                <a href="">
-                  <div className="img-box">
-                    <img
-                      src={require("../assets/images/images/p6.png")}
-                      alt=""
-                    />
-                  </div>
-                  <div className="detail-box">
-                    <h6>Flower Bouquet</h6>
-                    <h6>
-                      Price <span>$70</span>
-                    </h6>
-                  </div>
-                  <div className="new">
-                    <span>New</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <div className="col-sm-6 col-md-4 col-lg-3">
-              <div className="box">
-                <a href="">
-                  <div className="img-box">
-                    <img
-                      src={require("../assets/images/images/p7.png")}
-                      alt=""
-                    />
-                  </div>
-                  <div className="detail-box">
-                    <h6>Watch</h6>
-                    <h6>
-                      Price <span>$400</span>
-                    </h6>
-                  </div>
-                  <div className="new">
-                    <span>New</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <div className="col-sm-6 col-md-4 col-lg-3">
-              <div className="box">
-                <a href="">
-                  <div className="img-box">
-                    <img
-                      src={require("../assets/images/images/p8.png")}
-                      alt=""
-                    />
-                  </div>
-                  <div className="detail-box">
-                    <h6>Ring</h6>
-                    <h6>
-                      Price <span>$450</span>
-                    </h6>
-                  </div>
-                  <div className="new">
-                    <span>New</span>
-                  </div>
-                </a>
-              </div>
-            </div>
+            ))}
           </div>
           <div className="btn-box">
             <a href="">View All Products</a>
